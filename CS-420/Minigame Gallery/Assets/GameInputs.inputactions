@@ -1,0 +1,22 @@
+{
+    "name": "GameInputs",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "8712b2df-b68a-40af-ba59-751528a86543",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "7aa09330-b249-4323-b065-db7597cae310",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": []
+        }
+    ],
+    "controlSchemes": []
+}
