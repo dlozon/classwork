@@ -1,0 +1,9 @@
+COMPILE:
+make
+
+RUN:
+./MottLozon_mlfScheduler.exe <inputfile> <time_slice>
+
+LIMITATIONS:
+N/A
+To the best of my knowlege, everything works as intended without error.

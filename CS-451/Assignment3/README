@@ -1,0 +1,22 @@
+INPUT DESCRIPTION
+-p <number of people>
+-w <maximum allowed wandering time>
+-f <number of floors>
+
+REQUIRED:
+for the program to work correctly, 
+you must provide an itinerary through stdin like so:
+./program < <input file>
+
+COMPILE:
+make
+
+USAGE:
+./MottLozon_Elevator.exe <args> < <inputfile>
+
+NOTES
+Remember to always configure the number of people and floors
+
+LIMITATIONS:
+N/A
+To the best of my knowlege, everything works as intended without error.

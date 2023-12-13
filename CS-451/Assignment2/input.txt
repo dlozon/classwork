@@ -1,0 +1,4 @@
+Process ID Burst
+0 18
+4	4
+6 	 	  12

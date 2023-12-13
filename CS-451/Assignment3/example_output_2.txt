@@ -1,0 +1,118 @@
+COMMANDS TO PRODUCE THIS OUTPUT:
+$ make
+$ ./MottLozon_Elevator.exe -p 5 -w 7 -f 11 < input_2.txt
+
+OUTPUT:
+Number of people: 5
+Maximum allowed wandering time: 7
+Number of floors: 11
+
+Today's Itinerary:
+Person 0 will spend 1 seconds on floor 1. Total destinations for this person: 1
+Person 0 will spend 1 seconds on floor 10. Total destinations for this person: 2
+Person 0 will spend 5 seconds on floor 0. Total destinations for this person: 3
+Person 1 will spend 1 seconds on floor 3. Total destinations for this person: 1
+Person 1 will spend 2 seconds on floor 10. Total destinations for this person: 2
+Person 1 will spend 5 seconds on floor 0. Total destinations for this person: 3
+Person 2 will spend 1 seconds on floor 5. Total destinations for this person: 1
+Person 2 will spend 3 seconds on floor 10. Total destinations for this person: 2
+Person 2 will spend 5 seconds on floor 0. Total destinations for this person: 3
+Person 3 will spend 1 seconds on floor 7. Total destinations for this person: 1
+Person 3 will spend 4 seconds on floor 10. Total destinations for this person: 2
+Person 3 will spend 5 seconds on floor 0. Total destinations for this person: 3
+Person 4 will spend 1 seconds on floor 9. Total destinations for this person: 1
+Person 4 will spend 5 seconds on floor 10. Total destinations for this person: 2
+Person 4 will spend 5 seconds on floor 0. Total destinations for this person: 3
+Finished reading the itinerary. In total, 5 people were accounted for.
+
+	ELEVATOR: Waiting for requests...
+Person 0: Boarded the elevator and will depart on floor 1.
+Person 1: Boarded the elevator and will depart on floor 3.
+Person 2: Boarded the elevator and will depart on floor 5.
+Person 3: Boarded the elevator and will depart on floor 7.
+Person 4: Boarded the elevator and will depart on floor 9.
+	ELEVATOR: Moving from floor 0 to floor 1.
+	ELEVATOR: Waiting for passengers to load/depart...
+Person 0: Wandering on floor 1 for 1 seconds.
+Person 0: Boarded the elevator and will depart on floor 10.
+	ELEVATOR: Moving from floor 1 to floor 2.
+	ELEVATOR: Moving from floor 2 to floor 3.
+	ELEVATOR: Waiting for passengers to load/depart...
+Person 1: Wandering on floor 3 for 1 seconds.
+Person 1: Boarded the elevator and will depart on floor 10.
+	ELEVATOR: Moving from floor 3 to floor 4.
+	ELEVATOR: Moving from floor 4 to floor 5.
+	ELEVATOR: Waiting for passengers to load/depart...
+Person 2: Wandering on floor 5 for 1 seconds.
+Person 2: Boarded the elevator and will depart on floor 10.
+	ELEVATOR: Moving from floor 5 to floor 6.
+	ELEVATOR: Moving from floor 6 to floor 7.
+	ELEVATOR: Waiting for passengers to load/depart...
+Person 3: Wandering on floor 7 for 1 seconds.
+Person 3: Boarded the elevator and will depart on floor 10.
+	ELEVATOR: Moving from floor 7 to floor 8.
+	ELEVATOR: Moving from floor 8 to floor 9.
+	ELEVATOR: Waiting for passengers to load/depart...
+Person 4: Wandering on floor 9 for 1 seconds.
+Person 4: Boarded the elevator and will depart on floor 10.
+	ELEVATOR: Moving from floor 9 to floor 10.
+	ELEVATOR: Waiting for passengers to load/depart...
+Person 4: Wandering on floor 10 for 5 seconds.
+Person 3: Wandering on floor 10 for 4 seconds.
+Person 0: Wandering on floor 10 for 1 seconds.
+Person 2: Wandering on floor 10 for 3 seconds.
+Person 1: Wandering on floor 10 for 2 seconds.
+	ELEVATOR: Waiting for requests...
+Person 0: Boarded the elevator and will depart on floor 0.
+Person 1: Boarded the elevator and will depart on floor 0.
+	ELEVATOR: Moving from floor 10 to floor 9.
+Person 2: Waiting for the elevator to pick them up on floor 10.
+Person 3: Waiting for the elevator to pick them up on floor 10.
+	ELEVATOR: Moving from floor 9 to floor 8.
+Person 4: Waiting for the elevator to pick them up on floor 10.
+	ELEVATOR: Moving from floor 8 to floor 7.
+	ELEVATOR: Moving from floor 7 to floor 6.
+	ELEVATOR: Moving from floor 6 to floor 5.
+	ELEVATOR: Moving from floor 5 to floor 4.
+	ELEVATOR: Moving from floor 4 to floor 3.
+	ELEVATOR: Moving from floor 3 to floor 2.
+	ELEVATOR: Moving from floor 2 to floor 1.
+	ELEVATOR: Moving from floor 1 to floor 0.
+	ELEVATOR: Waiting for passengers to load/depart...
+Person 1: Wandering on floor 0 for 5 seconds.
+Person 0: Wandering on floor 0 for 5 seconds.
+	ELEVATOR: Moving from floor 0 to floor 1.
+	ELEVATOR: Moving from floor 1 to floor 2.
+	ELEVATOR: Moving from floor 2 to floor 3.
+Person 0: Completed journey for the day. Closing thread.
+Person 1: Completed journey for the day. Closing thread.
+	ELEVATOR: Moving from floor 3 to floor 4.
+	ELEVATOR: Moving from floor 4 to floor 5.
+	ELEVATOR: Moving from floor 5 to floor 6.
+	ELEVATOR: Moving from floor 6 to floor 7.
+	ELEVATOR: Moving from floor 7 to floor 8.
+	ELEVATOR: Moving from floor 8 to floor 9.
+	ELEVATOR: Moving from floor 9 to floor 10.
+	ELEVATOR: Waiting for passengers to load/depart...
+Person 4: Boarded the elevator and will depart on floor 0.
+Person 2: Boarded the elevator and will depart on floor 0.
+Person 3: Boarded the elevator and will depart on floor 0.
+	ELEVATOR: Moving from floor 10 to floor 9.
+	ELEVATOR: Moving from floor 9 to floor 8.
+	ELEVATOR: Moving from floor 8 to floor 7.
+	ELEVATOR: Moving from floor 7 to floor 6.
+	ELEVATOR: Moving from floor 6 to floor 5.
+	ELEVATOR: Moving from floor 5 to floor 4.
+	ELEVATOR: Moving from floor 4 to floor 3.
+	ELEVATOR: Moving from floor 3 to floor 2.
+	ELEVATOR: Moving from floor 2 to floor 1.
+	ELEVATOR: Moving from floor 1 to floor 0.
+	ELEVATOR: Waiting for passengers to load/depart...
+Person 4: Wandering on floor 0 for 5 seconds.
+Person 2: Wandering on floor 0 for 5 seconds.
+Person 3: Wandering on floor 0 for 5 seconds.
+	ELEVATOR: Waiting for requests...
+Person 4: Completed journey for the day. Closing thread.
+Person 2: Completed journey for the day. Closing thread.
+Person 3: Completed journey for the day. Closing thread.
+	ELEVATOR: The elevator has no more requests. Closing thread.
