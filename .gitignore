@@ -2,4 +2,5 @@
 *.zip
 
 # Ignore vscode
-*.vscode/
+.vscode/
+.vs/
