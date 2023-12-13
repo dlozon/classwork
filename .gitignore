@@ -1,0 +1,5 @@
+# Ignore any zipped submissions
+*.zip
+
+# Ignore vscode
+*.vscode/

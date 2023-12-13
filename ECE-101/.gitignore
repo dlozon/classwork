@@ -1,0 +1,9 @@
+# Ignore compiled output files
+*.o
+*.out
+*.exe
+
+# Ignore pdf submissions
+*.pdf
+# Keep the docx version of submissions
+!*.docx
