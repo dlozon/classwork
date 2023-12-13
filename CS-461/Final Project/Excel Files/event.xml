@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="Table1">
+	<Table>
+		<Column ss:Index="1" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Column ss:Index="3" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Column ss:Index="4" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Column ss:Index="5" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Column ss:Index="6" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Row>
+			<Cell><Data ss:Type="String">EventCode</Data></Cell>
+			<Cell><Data ss:Type="String">EventName</Data></Cell>
+			<Cell><Data ss:Type="String">Location</Data></Cell>
+			<Cell><Data ss:Type="String">StartDate</Data></Cell>
+			<Cell><Data ss:Type="String">EndDate</Data></Cell>
+			<Cell><Data ss:Type="String">DistrictCode</Data></Cell>
+		</Row>
+
+		<Row>
+			<Cell><Data ss:Type="String">AZVA</Data></Cell>
+			<Cell><Data ss:Type="String">Arizona East Regional</Data></Cell>
+			<Cell><Data ss:Type="String">Flagstaff, Arizona</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-08</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-10</Data></Cell>
+			<Cell><Data ss:Type="String">FNC</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">CASJ</Data></Cell>
+			<Cell><Data ss:Type="String">Silicon Valley Regional</Data></Cell>
+			<Cell><Data ss:Type="String">San Jose, California</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-22</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-24</Data></Cell>
+			<Cell><Data ss:Type="String">FNC</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">FIMID</Data></Cell>
+			<Cell><Data ss:Type="String">FIM District Midland Event presented by Dow</Data></Cell>
+			<Cell><Data ss:Type="String">Midland, Michigan</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-15</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-17</Data></Cell>
+			<Cell><Data ss:Type="String">FIM</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">FLOR</Data></Cell>
+			<Cell><Data ss:Type="String">Orlando Regional</Data></Cell>
+			<Cell><Data ss:Type="String">Orlando, Florida</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-15</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-17</Data></Cell>
+			<Cell><Data ss:Type="String">FNC</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">FLTA</Data></Cell>
+			<Cell><Data ss:Type="String">Tallahassee Regional</Data></Cell>
+			<Cell><Data ss:Type="String">Tallahassee, Florida</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-08</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-10</Data></Cell>
+			<Cell><Data ss:Type="String">FNC</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">FLWP</Data></Cell>
+			<Cell><Data ss:Type="String">South Florida Regional</Data></Cell>
+			<Cell><Data ss:Type="String">West Palm Beach, Florida</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-15</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-17</Data></Cell>
+			<Cell><Data ss:Type="String">FNC</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">FMAHAT</Data></Cell>
+			<Cell><Data ss:Type="String">FMA District Hatboro-Horsham Event</Data></Cell>
+			<Cell><Data ss:Type="String">Horsham, Pennsylvania</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-15</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-17</Data></Cell>
+			<Cell><Data ss:Type="String">FMA</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">GACAR</Data></Cell>
+			<Cell><Data ss:Type="String">PCH District Carrollton Event</Data></Cell>
+			<Cell><Data ss:Type="String">Carrollton, Georgia</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-22</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-24</Data></Cell>
+			<Cell><Data ss:Type="String">PCH</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">GACMP</Data></Cell>
+			<Cell><Data ss:Type="String">Peachtree District Championship</Data></Cell>
+			<Cell><Data ss:Type="String">Atlanta, Georgia</Data></Cell>
+			<Cell><Data ss:Type="String">2023-04-05</Data></Cell>
+			<Cell><Data ss:Type="String">2023-04-07</Data></Cell>
+			<Cell><Data ss:Type="String">PCH</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">GADAL</Data></Cell>
+			<Cell><Data ss:Type="String">PCH District Dalton Event</Data></Cell>
+			<Cell><Data ss:Type="String">Dalton, Georgia</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-15</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-17</Data></Cell>
+			<Cell><Data ss:Type="String">PCH</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">MIDET</Data></Cell>
+			<Cell><Data ss:Type="String">FIM District Detroit Event presented by DTE</Data></Cell>
+			<Cell><Data ss:Type="String">Detroit, Michigan</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-01</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-03</Data></Cell>
+			<Cell><Data ss:Type="String">FIM</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">MIKEN</Data></Cell>
+			<Cell><Data ss:Type="String">FIM District Kentwood Event presented by Dematic</Data></Cell>
+			<Cell><Data ss:Type="String">Kentwood, Michigan</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-08</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-10</Data></Cell>
+			<Cell><Data ss:Type="String">FIM</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">MILA2</Data></Cell>
+			<Cell><Data ss:Type="String">FIM District Lakeview Event #2</Data></Cell>
+			<Cell><Data ss:Type="String">Lakeview, Michigan</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-22</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-24</Data></Cell>
+			<Cell><Data ss:Type="String">FIM</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">MIRIC</Data></Cell>
+			<Cell><Data ss:Type="String">FIM District Lakeview Event #1 presented by Parker-Hannifin</Data></Cell>
+			<Cell><Data ss:Type="String">Lakeview, Michigan</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-01</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-03</Data></Cell>
+			<Cell><Data ss:Type="String">FIM</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">MITRY</Data></Cell>
+			<Cell><Data ss:Type="String">FIM District Troy Event #1 presented by Aptiv</Data></Cell>
+			<Cell><Data ss:Type="String">Troy, Michigan</Data></Cell>
+			<Cell><Data ss:Type="String">2023-07-01</Data></Cell>
+			<Cell><Data ss:Type="String">2023-07-03</Data></Cell>
+			<Cell><Data ss:Type="String">FIM</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">MNDU</Data></Cell>
+			<Cell><Data ss:Type="String">Lake Superior Regional</Data></Cell>
+			<Cell><Data ss:Type="String">Duluth, Minnesota</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-01</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-03</Data></Cell>
+			<Cell><Data ss:Type="String">FNC</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">MOSE</Data></Cell>
+			<Cell><Data ss:Type="String">Central Missouri Regional</Data></Cell>
+			<Cell><Data ss:Type="String">Lee's Summit, Missouri</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-22</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-24</Data></Cell>
+			<Cell><Data ss:Type="String">FNC</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">MSLR</Data></Cell>
+			<Cell><Data ss:Type="String">Magnolia Regional</Data></Cell>
+			<Cell><Data ss:Type="String">Southaven, Mississippi</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-01</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-03</Data></Cell>
+			<Cell><Data ss:Type="String">FNC</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">NYLI</Data></Cell>
+			<Cell><Data ss:Type="String">FIRST Long Island Regional #1</Data></Cell>
+			<Cell><Data ss:Type="String">Hempstead, New York</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-08</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-10</Data></Cell>
+			<Cell><Data ss:Type="String">FMA</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">NYLI2</Data></Cell>
+			<Cell><Data ss:Type="String">FIRST Long Island Regional #2</Data></Cell>
+			<Cell><Data ss:Type="String">Hempstead, New York</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-15</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-17</Data></Cell>
+			<Cell><Data ss:Type="String">FMA</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">OHCL</Data></Cell>
+			<Cell><Data ss:Type="String">Buckeye Regional</Data></Cell>
+			<Cell><Data ss:Type="String">Cleveland, Ohio</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-08</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-10</Data></Cell>
+			<Cell><Data ss:Type="String">FNC</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">ONWAT</Data></Cell>
+			<Cell><Data ss:Type="String">ONT District University of Waterloo Event</Data></Cell>
+			<Cell><Data ss:Type="String">Waterloo, Ontario</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-15</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-17</Data></Cell>
+			<Cell><Data ss:Type="String">ONT</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">TNKN</Data></Cell>
+			<Cell><Data ss:Type="String">Smoky Mountains Regional</Data></Cell>
+			<Cell><Data ss:Type="String">Knoxville, Tennessee</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-15</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-17</Data></Cell>
+			<Cell><Data ss:Type="String">FNC</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">TXHOU</Data></Cell>
+			<Cell><Data ss:Type="String">FIT District Houston Event</Data></Cell>
+			<Cell><Data ss:Type="String">Houston, Texas</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-22</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-24</Data></Cell>
+			<Cell><Data ss:Type="String">FIT</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">VABLA</Data></Cell>
+			<Cell><Data ss:Type="String">CHS District Blacksburg VA Event</Data></Cell>
+			<Cell><Data ss:Type="String">Blacksburg, Virginia</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-29</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-31</Data></Cell>
+			<Cell><Data ss:Type="String">CHS</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">WAAHS</Data></Cell>
+			<Cell><Data ss:Type="String">PNW District Auburn Event</Data></Cell>
+			<Cell><Data ss:Type="String">Auburn, Washington</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-01</Data></Cell>
+			<Cell><Data ss:Type="String">2023-03-03</Data></Cell>
+			<Cell><Data ss:Type="String">PNW</Data></Cell>
+		</Row>	</Table>
+</Worksheet>
+</Workbook>

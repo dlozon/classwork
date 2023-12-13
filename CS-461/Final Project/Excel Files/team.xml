@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="Table1">
+	<Table>
+		<Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Column ss:Index="3" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Column ss:Index="5" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Row>
+			<Cell><Data ss:Type="String">TeamNumber</Data></Cell>
+			<Cell><Data ss:Type="String">TeamName</Data></Cell>
+			<Cell><Data ss:Type="String">SchoolName</Data></Cell>
+			<Cell><Data ss:Type="String">RookieYear</Data></Cell>
+			<Cell><Data ss:Type="String">DistrictCode</Data></Cell>
+		</Row>
+
+		<Row>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="String">Team Rush</Data></Cell>
+			<Cell><Data ss:Type="String">Velocity High School</Data></Cell>
+			<Cell><Data ss:Type="Number">1997</Data></Cell>
+			<Cell><Data ss:Type="String">FIM</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">33</Data></Cell>
+			<Cell><Data ss:Type="String">Killer Bees</Data></Cell>
+			<Cell><Data ss:Type="String">Hive High School</Data></Cell>
+			<Cell><Data ss:Type="Number">2000</Data></Cell>
+			<Cell><Data ss:Type="String">FIM</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+			<Cell><Data ss:Type="String">Space Monkeys</Data></Cell>
+			<Cell><Data ss:Type="String">Astro High School</Data></Cell>
+			<Cell><Data ss:Type="Number">1996</Data></Cell>
+			<Cell><Data ss:Type="String">ISR</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">135</Data></Cell>
+			<Cell><Data ss:Type="String">Penn Robotics</Data></Cell>
+			<Cell><Data ss:Type="String">Innovation Institute</Data></Cell>
+			<Cell><Data ss:Type="Number">1996</Data></Cell>
+			<Cell><Data ss:Type="String">FIN</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">254</Data></Cell>
+			<Cell><Data ss:Type="String">Cheesy Poofs</Data></Cell>
+			<Cell><Data ss:Type="String">Innovation High School</Data></Cell>
+			<Cell><Data ss:Type="Number">1999</Data></Cell>
+			<Cell><Data ss:Type="String"></Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">292</Data></Cell>
+			<Cell><Data ss:Type="String">PantherTech</Data></Cell>
+			<Cell><Data ss:Type="String">Techville High School</Data></Cell>
+			<Cell><Data ss:Type="Number">1998</Data></Cell>
+			<Cell><Data ss:Type="String">FIN</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">548</Data></Cell>
+			<Cell><Data ss:Type="String">Robostangs</Data></Cell>
+			<Cell><Data ss:Type="String">Tech Institute</Data></Cell>
+			<Cell><Data ss:Type="Number">2001</Data></Cell>
+			<Cell><Data ss:Type="String">FIM</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">1414</Data></Cell>
+			<Cell><Data ss:Type="String">IHOT</Data></Cell>
+			<Cell><Data ss:Type="String">Hot Robotics School</Data></Cell>
+			<Cell><Data ss:Type="Number">2004</Data></Cell>
+			<Cell><Data ss:Type="String">PCH</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">1690</Data></Cell>
+			<Cell><Data ss:Type="String">Orbit</Data></Cell>
+			<Cell><Data ss:Type="String">Galaxy Academy</Data></Cell>
+			<Cell><Data ss:Type="Number">2011</Data></Cell>
+			<Cell><Data ss:Type="String">ISR</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">1746</Data></Cell>
+			<Cell><Data ss:Type="String">OTTO</Data></Cell>
+			<Cell><Data ss:Type="String">RoboTech Academy</Data></Cell>
+			<Cell><Data ss:Type="Number">2006</Data></Cell>
+			<Cell><Data ss:Type="String">PCH</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">2056</Data></Cell>
+			<Cell><Data ss:Type="String">OP Robotics</Data></Cell>
+			<Cell><Data ss:Type="String">Automation Institute</Data></Cell>
+			<Cell><Data ss:Type="Number">2006</Data></Cell>
+			<Cell><Data ss:Type="String">ONT</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">2337</Data></Cell>
+			<Cell><Data ss:Type="String">EngiNERDs</Data></Cell>
+			<Cell><Data ss:Type="String">Inventor High School</Data></Cell>
+			<Cell><Data ss:Type="Number">2008</Data></Cell>
+			<Cell><Data ss:Type="String">FIM</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">3538</Data></Cell>
+			<Cell><Data ss:Type="String">RoboJackets</Data></Cell>
+			<Cell><Data ss:Type="String">Tech Center</Data></Cell>
+			<Cell><Data ss:Type="Number">2011</Data></Cell>
+			<Cell><Data ss:Type="String">FIM</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">3604</Data></Cell>
+			<Cell><Data ss:Type="String">Goon Squad</Data></Cell>
+			<Cell><Data ss:Type="String">Tech Academy</Data></Cell>
+			<Cell><Data ss:Type="Number">2011</Data></Cell>
+			<Cell><Data ss:Type="String">FIM</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">3683</Data></Cell>
+			<Cell><Data ss:Type="String">Team DAVE</Data></Cell>
+			<Cell><Data ss:Type="String">RoboTech School</Data></Cell>
+			<Cell><Data ss:Type="Number">2012</Data></Cell>
+			<Cell><Data ss:Type="String">ONT</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">5090</Data></Cell>
+			<Cell><Data ss:Type="String">Torquenados</Data></Cell>
+			<Cell><Data ss:Type="String">Gear Academy</Data></Cell>
+			<Cell><Data ss:Type="Number">2014</Data></Cell>
+			<Cell><Data ss:Type="String">FIM</Data></Cell>
+		</Row>	</Table>
+</Worksheet>
+</Workbook>

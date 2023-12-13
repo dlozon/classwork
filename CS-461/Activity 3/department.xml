@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="Table1">
+	<Table>
+		<Column ss:Index="1" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Column ss:Index="4" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Row>
+			<Cell><Data ss:Type="String">DNAME</Data></Cell>
+			<Cell><Data ss:Type="String">DNUMBER</Data></Cell>
+			<Cell><Data ss:Type="String">MGRSSN</Data></Cell>
+			<Cell><Data ss:Type="String">MGRSTARTDATE</Data></Cell>
+		</Row>
+
+		<Row>
+			<Cell><Data ss:Type="String">Public Outreach</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">1234567890</Data></Cell>
+			<Cell><Data ss:Type="String">2010-01-01</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Real Estate Management</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">1234567891</Data></Cell>
+			<Cell><Data ss:Type="String">2011-01-01</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Research and Development</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">1234567893</Data></Cell>
+			<Cell><Data ss:Type="String">2012-01-01</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Sales</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">1234567892</Data></Cell>
+			<Cell><Data ss:Type="String">2013-01-01</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Investments</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">1234567894</Data></Cell>
+			<Cell><Data ss:Type="String">2014-01-01</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Hive Expansion</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">1234567895</Data></Cell>
+			<Cell><Data ss:Type="String">2015-01-01</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Environmental Affairs</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">1234567897</Data></Cell>
+			<Cell><Data ss:Type="String">2016-01-01</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Rock and Roll</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">1234567896</Data></Cell>
+			<Cell><Data ss:Type="String">2017-01-01</Data></Cell>
+		</Row>	</Table>
+</Worksheet>
+</Workbook>

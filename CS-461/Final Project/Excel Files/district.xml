@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="Table1">
+	<Table>
+		<Column ss:Index="1" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Row>
+			<Cell><Data ss:Type="String">DistrictCode</Data></Cell>
+			<Cell><Data ss:Type="String">DistrictName</Data></Cell>
+		</Row>
+
+		<Row>
+			<Cell><Data ss:Type="String">CHS</Data></Cell>
+			<Cell><Data ss:Type="String">FIRST Chesapeake District</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">FIM</Data></Cell>
+			<Cell><Data ss:Type="String">FIRST In Michigan District</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">FIN</Data></Cell>
+			<Cell><Data ss:Type="String">FIRST Indiana Robotics District</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">FIT</Data></Cell>
+			<Cell><Data ss:Type="String">FIRST In Texas District</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">FMA</Data></Cell>
+			<Cell><Data ss:Type="String">FIRST Mid-Atlantic District</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">FNC</Data></Cell>
+			<Cell><Data ss:Type="String">FIRST North Carolina District</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">ISR</Data></Cell>
+			<Cell><Data ss:Type="String">FIRST Israel District</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">NE</Data></Cell>
+			<Cell><Data ss:Type="String">New England District</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">ONT</Data></Cell>
+			<Cell><Data ss:Type="String">Ontario District</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">PCH</Data></Cell>
+			<Cell><Data ss:Type="String">Peachtree District</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">PNW</Data></Cell>
+			<Cell><Data ss:Type="String">Pacific Northwest District</Data></Cell>
+		</Row>	</Table>
+</Worksheet>
+</Workbook>

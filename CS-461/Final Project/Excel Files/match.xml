@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="Table1">
+	<Table>
+		<Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Column ss:Index="5" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Row>
+			<Cell><Data ss:Type="String">MatchNumber</Data></Cell>
+			<Cell><Data ss:Type="String">EventCode</Data></Cell>
+			<Cell><Data ss:Type="String">RedAllianceScore</Data></Cell>
+			<Cell><Data ss:Type="String">BlueAllianceScore</Data></Cell>
+			<Cell><Data ss:Type="String">WinningAlliance</Data></Cell>
+		</Row>
+
+		<Row>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="String">AZVA</Data></Cell>
+			<Cell><Data ss:Type="Number">100</Data></Cell>
+			<Cell><Data ss:Type="Number">90</Data></Cell>
+			<Cell><Data ss:Type="String">RED</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="String">FIMID</Data></Cell>
+			<Cell><Data ss:Type="Number">150</Data></Cell>
+			<Cell><Data ss:Type="Number">140</Data></Cell>
+			<Cell><Data ss:Type="String">RED</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="String">FLOR</Data></Cell>
+			<Cell><Data ss:Type="Number">95</Data></Cell>
+			<Cell><Data ss:Type="Number">95</Data></Cell>
+			<Cell><Data ss:Type="String">TIE</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="String">MIDET</Data></Cell>
+			<Cell><Data ss:Type="Number">120</Data></Cell>
+			<Cell><Data ss:Type="Number">125</Data></Cell>
+			<Cell><Data ss:Type="String">BLUE</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="String">AZVA</Data></Cell>
+			<Cell><Data ss:Type="Number">95</Data></Cell>
+			<Cell><Data ss:Type="Number">95</Data></Cell>
+			<Cell><Data ss:Type="String">TIE</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="String">FIMID</Data></Cell>
+			<Cell><Data ss:Type="Number">155</Data></Cell>
+			<Cell><Data ss:Type="Number">150</Data></Cell>
+			<Cell><Data ss:Type="String">RED</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="String">FLOR</Data></Cell>
+			<Cell><Data ss:Type="Number">85</Data></Cell>
+			<Cell><Data ss:Type="Number">90</Data></Cell>
+			<Cell><Data ss:Type="String">BLUE</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="String">MIDET</Data></Cell>
+			<Cell><Data ss:Type="Number">130</Data></Cell>
+			<Cell><Data ss:Type="Number">135</Data></Cell>
+			<Cell><Data ss:Type="String">BLUE</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="String">AZVA</Data></Cell>
+			<Cell><Data ss:Type="Number">105</Data></Cell>
+			<Cell><Data ss:Type="Number">100</Data></Cell>
+			<Cell><Data ss:Type="String">RED</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="String">FIMID</Data></Cell>
+			<Cell><Data ss:Type="Number">145</Data></Cell>
+			<Cell><Data ss:Type="Number">140</Data></Cell>
+			<Cell><Data ss:Type="String">RED</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="String">FLOR</Data></Cell>
+			<Cell><Data ss:Type="Number">95</Data></Cell>
+			<Cell><Data ss:Type="Number">100</Data></Cell>
+			<Cell><Data ss:Type="String">BLUE</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="String">MIDET</Data></Cell>
+			<Cell><Data ss:Type="Number">115</Data></Cell>
+			<Cell><Data ss:Type="Number">115</Data></Cell>
+			<Cell><Data ss:Type="String">TIE</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="String">AZVA</Data></Cell>
+			<Cell><Data ss:Type="Number">95</Data></Cell>
+			<Cell><Data ss:Type="Number">85</Data></Cell>
+			<Cell><Data ss:Type="String">RED</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="String">FIMID</Data></Cell>
+			<Cell><Data ss:Type="Number">160</Data></Cell>
+			<Cell><Data ss:Type="Number">145</Data></Cell>
+			<Cell><Data ss:Type="String">RED</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="String">FLOR</Data></Cell>
+			<Cell><Data ss:Type="Number">100</Data></Cell>
+			<Cell><Data ss:Type="Number">105</Data></Cell>
+			<Cell><Data ss:Type="String">BLUE</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="String">MIDET</Data></Cell>
+			<Cell><Data ss:Type="Number">125</Data></Cell>
+			<Cell><Data ss:Type="Number">130</Data></Cell>
+			<Cell><Data ss:Type="String">BLUE</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="String">AZVA</Data></Cell>
+			<Cell><Data ss:Type="Number">155</Data></Cell>
+			<Cell><Data ss:Type="Number">100</Data></Cell>
+			<Cell><Data ss:Type="String">RED</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="String">FIMID</Data></Cell>
+			<Cell><Data ss:Type="Number">165</Data></Cell>
+			<Cell><Data ss:Type="Number">160</Data></Cell>
+			<Cell><Data ss:Type="String">RED</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="String">FLOR</Data></Cell>
+			<Cell><Data ss:Type="Number">105</Data></Cell>
+			<Cell><Data ss:Type="Number">110</Data></Cell>
+			<Cell><Data ss:Type="String">BLUE</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="String">MIDET</Data></Cell>
+			<Cell><Data ss:Type="Number">135</Data></Cell>
+			<Cell><Data ss:Type="Number">140</Data></Cell>
+			<Cell><Data ss:Type="String">BLUE</Data></Cell>
+		</Row>	</Table>
+</Worksheet>
+</Workbook>

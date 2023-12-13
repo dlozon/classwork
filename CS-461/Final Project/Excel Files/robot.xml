@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="Table1">
+	<Table>
+		<Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Row>
+			<Cell><Data ss:Type="String">TeamNumber</Data></Cell>
+			<Cell><Data ss:Type="String">RobotName</Data></Cell>
+			<Cell><Data ss:Type="String">WeightKG</Data></Cell>
+			<Cell><Data ss:Type="String">LengthCM</Data></Cell>
+			<Cell><Data ss:Type="String">HeightCM</Data></Cell>
+			<Cell><Data ss:Type="String">WidthCM</Data></Cell>
+		</Row>
+
+		<Row>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="String">RushBot</Data></Cell>
+			<Cell><Data ss:Type="Number">48</Data></Cell>
+			<Cell><Data ss:Type="Number">68</Data></Cell>
+			<Cell><Data ss:Type="Number">115</Data></Cell>
+			<Cell><Data ss:Type="Number">58</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">33</Data></Cell>
+			<Cell><Data ss:Type="String">BumbleBot</Data></Cell>
+			<Cell><Data ss:Type="Number">50</Data></Cell>
+			<Cell><Data ss:Type="Number">70</Data></Cell>
+			<Cell><Data ss:Type="Number">120</Data></Cell>
+			<Cell><Data ss:Type="Number">60</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+			<Cell><Data ss:Type="String">SpaceBot</Data></Cell>
+			<Cell><Data ss:Type="Number">58</Data></Cell>
+			<Cell><Data ss:Type="Number">78</Data></Cell>
+			<Cell><Data ss:Type="Number">135</Data></Cell>
+			<Cell><Data ss:Type="Number">68</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">135</Data></Cell>
+			<Cell><Data ss:Type="String">PennBot</Data></Cell>
+			<Cell><Data ss:Type="Number">51</Data></Cell>
+			<Cell><Data ss:Type="Number">71</Data></Cell>
+			<Cell><Data ss:Type="Number">122</Data></Cell>
+			<Cell><Data ss:Type="Number">61</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">254</Data></Cell>
+			<Cell><Data ss:Type="String">CheesyBot</Data></Cell>
+			<Cell><Data ss:Type="Number">60</Data></Cell>
+			<Cell><Data ss:Type="Number">80</Data></Cell>
+			<Cell><Data ss:Type="Number">140</Data></Cell>
+			<Cell><Data ss:Type="Number">70</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">292</Data></Cell>
+			<Cell><Data ss:Type="String">PantherBot</Data></Cell>
+			<Cell><Data ss:Type="Number">49</Data></Cell>
+			<Cell><Data ss:Type="Number">69</Data></Cell>
+			<Cell><Data ss:Type="Number">118</Data></Cell>
+			<Cell><Data ss:Type="Number">59</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">548</Data></Cell>
+			<Cell><Data ss:Type="String">StangBot</Data></Cell>
+			<Cell><Data ss:Type="Number">55</Data></Cell>
+			<Cell><Data ss:Type="Number">75</Data></Cell>
+			<Cell><Data ss:Type="Number">130</Data></Cell>
+			<Cell><Data ss:Type="Number">65</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">1414</Data></Cell>
+			<Cell><Data ss:Type="String">IhotBot</Data></Cell>
+			<Cell><Data ss:Type="Number">57</Data></Cell>
+			<Cell><Data ss:Type="Number">77</Data></Cell>
+			<Cell><Data ss:Type="Number">134</Data></Cell>
+			<Cell><Data ss:Type="Number">67</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">1690</Data></Cell>
+			<Cell><Data ss:Type="String">Orbiter</Data></Cell>
+			<Cell><Data ss:Type="Number">52</Data></Cell>
+			<Cell><Data ss:Type="Number">72</Data></Cell>
+			<Cell><Data ss:Type="Number">125</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">1746</Data></Cell>
+			<Cell><Data ss:Type="String">OttoBot</Data></Cell>
+			<Cell><Data ss:Type="Number">59</Data></Cell>
+			<Cell><Data ss:Type="Number">79</Data></Cell>
+			<Cell><Data ss:Type="Number">138</Data></Cell>
+			<Cell><Data ss:Type="Number">69</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">2056</Data></Cell>
+			<Cell><Data ss:Type="String">OPBot</Data></Cell>
+			<Cell><Data ss:Type="Number">47</Data></Cell>
+			<Cell><Data ss:Type="Number">67</Data></Cell>
+			<Cell><Data ss:Type="Number">112</Data></Cell>
+			<Cell><Data ss:Type="Number">56</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">2337</Data></Cell>
+			<Cell><Data ss:Type="String">NerdBot</Data></Cell>
+			<Cell><Data ss:Type="Number">54</Data></Cell>
+			<Cell><Data ss:Type="Number">74</Data></Cell>
+			<Cell><Data ss:Type="Number">128</Data></Cell>
+			<Cell><Data ss:Type="Number">64</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">3538</Data></Cell>
+			<Cell><Data ss:Type="String">JacketBot</Data></Cell>
+			<Cell><Data ss:Type="Number">56</Data></Cell>
+			<Cell><Data ss:Type="Number">76</Data></Cell>
+			<Cell><Data ss:Type="Number">132</Data></Cell>
+			<Cell><Data ss:Type="Number">66</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">3604</Data></Cell>
+			<Cell><Data ss:Type="String">GoonBot</Data></Cell>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+			<Cell><Data ss:Type="Number">66</Data></Cell>
+			<Cell><Data ss:Type="Number">113</Data></Cell>
+			<Cell><Data ss:Type="Number">57</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">3683</Data></Cell>
+			<Cell><Data ss:Type="String">DaveBot</Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">73</Data></Cell>
+			<Cell><Data ss:Type="Number">127</Data></Cell>
+			<Cell><Data ss:Type="Number">63</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">5090</Data></Cell>
+			<Cell><Data ss:Type="String">TorqueMaster</Data></Cell>
+			<Cell><Data ss:Type="Number">45</Data></Cell>
+			<Cell><Data ss:Type="Number">65</Data></Cell>
+			<Cell><Data ss:Type="Number">110</Data></Cell>
+			<Cell><Data ss:Type="Number">55</Data></Cell>
+		</Row>	</Table>
+</Worksheet>
+</Workbook>
