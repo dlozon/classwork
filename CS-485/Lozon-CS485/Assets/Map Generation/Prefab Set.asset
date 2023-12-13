@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dded20f928340d3bd4366169cdae5a5, type: 3}
+  m_Name: Prefab Set
+  m_EditorClassIdentifier: 
+  serializedObjectVersion:
+    version: 1.19.4
+  prefabWidth: 1
+  prefabHeight: 1
+  prefabTypes: []
+  openPrefabSet:
+    elements:
+    - id: 75eba64a-cec2-4ff2-b791-2bfe89c7d18b
+      name: Wall
+      prefabs:
+      - prefab: {fileID: 3874380490756246161, guid: 38d7a4b416c29554aaada773f01c3657, type: 3}
+    - id: 77d67391-3dcf-4d38-905d-d1c8e0ce0e0a
+      name: Player
+      prefabs:
+      - prefab: {fileID: 2294097986490655284, guid: b0aa981f87a264843810838569002b9f, type: 3}
+    - id: b150c19c-06d9-4817-a3db-5a8279072b0f
+      name: Enemy
+      prefabs:
+      - prefab: {fileID: 4651712269009281910, guid: 8f0053de652ed844c9c562d491fe553f, type: 3}
+    - id: 200da6fb-b71b-4376-aa64-17192d49c0aa
+      name: Floor
+      prefabs: []
+    - id: 93667190-0b95-4b95-b6ba-5be2d8d4963d
+      name: Exit
+      prefabs:
+      - prefab: {fileID: 1514838442195789469, guid: 8c82900e00a455e4fa4930bfaec706bf, type: 3}
+    orderedIds:
+    - 200da6fb-b71b-4376-aa64-17192d49c0aa
+    - 75eba64a-cec2-4ff2-b791-2bfe89c7d18b
+    - 77d67391-3dcf-4d38-905d-d1c8e0ce0e0a
+    - b150c19c-06d9-4817-a3db-5a8279072b0f
+    - 93667190-0b95-4b95-b6ba-5be2d8d4963d

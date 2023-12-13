@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01c4f686400ae2a2a6aae7f55d65835, type: 3}
+  m_Name: Named Color Set
+  m_EditorClassIdentifier: 
+  serializedObjectVersion:
+    version: 1.19.4
+  namedColorDataSet:
+    elements:
+    - id: a5c5503b-5e96-45e2-a3fe-4d4a3fe5b8f4
+      name: Floor
+      color:
+        serializedVersion: 2
+        rgba: 4290361785
+    - id: 686c88b0-6f02-4675-9438-32c4f208523d
+      name: Wall
+      color:
+        serializedVersion: 2
+        rgba: 4280033797
+    - id: 99d38ab0-442e-4512-831f-f36e56d8b095
+      name: Player
+      color:
+        serializedVersion: 2
+        rgba: 4291877728
+    - id: 7cf5285d-c69e-41e3-990f-afb82cc88c90
+      name: Enemy
+      color:
+        serializedVersion: 2
+        rgba: 4278190335
+    - id: 432e2834-c028-416b-861e-f64ee5efad88
+      name: Exit
+      color:
+        serializedVersion: 2
+        rgba: 4278447648
+    orderedIds:
+    - a5c5503b-5e96-45e2-a3fe-4d4a3fe5b8f4
+    - 686c88b0-6f02-4675-9438-32c4f208523d
+    - 99d38ab0-442e-4512-831f-f36e56d8b095
+    - 7cf5285d-c69e-41e3-990f-afb82cc88c90
+    - 432e2834-c028-416b-861e-f64ee5efad88
+  serializedNames: []
+  serializedColors: []
+  serializedLinkedSets: []
