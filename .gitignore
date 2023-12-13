@@ -1,6 +1,10 @@
 # Ignore any zipped submissions
 *.zip
 
+# Ignore backups and autosaves
+*.asv
+*.bak
+
 # Ignore vscode
 **/.vscode/
 **/.vs/

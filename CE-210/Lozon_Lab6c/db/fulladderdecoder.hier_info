@@ -1,0 +1,35 @@
+|fulladderdecoder
+SW[7] => decoder3to8:U0.d[0]
+SW[8] => decoder3to8:U0.d[1]
+SW[9] => decoder3to8:U0.d[2]
+LEDR[8] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[9] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fulladderdecoder|decoder3to8:U0
+d[0] => y.IN1
+d[0] => y.IN1
+d[0] => y.IN1
+d[0] => y.IN1
+d[0] => y.IN1
+d[0] => y.IN1
+d[0] => y.IN1
+d[0] => y.IN1
+d[1] => y.IN0
+d[1] => y.IN0
+d[1] => y.IN0
+d[1] => y.IN0
+d[2] => y.IN1
+d[2] => y.IN1
+d[2] => y.IN1
+d[2] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

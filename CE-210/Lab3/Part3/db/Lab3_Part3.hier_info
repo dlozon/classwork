@@ -1,0 +1,67 @@
+|Lab3_Part3
+SW[0] => inv_1:U3.a
+SW[0] => and_2:U5.b
+SW[1] => inv_1:U2.a
+SW[1] => and_3:U4.c
+SW[2] => inv_1:U1.a
+SW[3] => inv_1:U0.a
+SW[3] => and_3:U4.a
+LEDR[0] <= and_3:U6.y
+LEDR[1] <= and_2:U5.y
+LEDR[2] <= and_3:U4.y
+LEDR[3] <= inv_1:U3.y
+LEDR[4] <= inv_1:U2.y
+LEDR[5] <= inv_1:U1.y
+LEDR[6] <= inv_1:U0.y
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= or_3:U7.y
+
+
+|Lab3_Part3|inv_1:U0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab3_Part3|inv_1:U1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab3_Part3|inv_1:U2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab3_Part3|inv_1:U3
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab3_Part3|and_3:U4
+a => process_0.IN0
+b => process_0.IN1
+c => process_0.IN1
+y <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab3_Part3|and_2:U5
+a => process_0.IN0
+b => process_0.IN1
+y <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab3_Part3|and_3:U6
+a => process_0.IN0
+b => process_0.IN1
+c => process_0.IN1
+y <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab3_Part3|or_3:U7
+a => process_0.IN0
+b => process_0.IN1
+c => process_0.IN1
+y <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+

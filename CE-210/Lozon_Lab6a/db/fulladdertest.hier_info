@@ -1,0 +1,19 @@
+|fulladdertest
+SW[7] => fulladder_behave:DUT0.Cin
+SW[8] => fulladder_behave:DUT0.B
+SW[9] => fulladder_behave:DUT0.A
+LEDR[8] << fulladder_behave:DUT0.S
+LEDR[9] << fulladder_behave:DUT0.Cout
+
+
+|fulladdertest|fulladder_behave:DUT0
+A => process_0.IN0
+A => process_0.IN0
+B => process_0.IN1
+B => process_0.IN1
+Cin => process_0.IN1
+Cin => process_0.IN1
+S <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+

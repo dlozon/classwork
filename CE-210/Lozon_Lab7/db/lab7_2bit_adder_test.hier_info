@@ -1,0 +1,61 @@
+|lab7_2bit_adder_test
+SW[0] => lab7_2bit_adder:DUT.B[0]
+SW[0] => LEDR[0].DATAIN
+SW[1] => lab7_2bit_adder:DUT.B[1]
+SW[1] => LEDR[1].DATAIN
+SW[2] => ~NO_FANOUT~
+SW[3] => lab7_2bit_adder:DUT.A[0]
+SW[3] => LEDR[3].DATAIN
+SW[4] => lab7_2bit_adder:DUT.A[1]
+SW[4] => LEDR[4].DATAIN
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+LEDR[0] << SW[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] << SW[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] << <GND>
+LEDR[3] << SW[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] << SW[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] << <GND>
+LEDR[6] << lab7_2bit_adder:DUT.S[0]
+LEDR[7] << lab7_2bit_adder:DUT.S[1]
+LEDR[8] << lab7_2bit_adder:DUT.C
+LEDR[9] << lab7_2bit_adder:DUT.V
+
+
+|lab7_2bit_adder_test|lab7_2bit_adder:DUT
+A[0] => fulladder_behave:U0.A
+A[1] => fulladder_behave:U1.A
+B[0] => fulladder_behave:U0.B
+B[1] => fulladder_behave:U1.B
+Cin => ~NO_FANOUT~
+S[0] <= fulladder_behave:U0.S
+S[1] <= fulladder_behave:U1.S
+C <= fulladder_behave:U1.Cout
+V <= V.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab7_2bit_adder_test|lab7_2bit_adder:DUT|fulladder_behave:U0
+A => process_0.IN0
+A => process_0.IN0
+B => process_0.IN1
+B => process_0.IN1
+Cin => process_0.IN1
+Cin => process_0.IN1
+S <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab7_2bit_adder_test|lab7_2bit_adder:DUT|fulladder_behave:U1
+A => process_0.IN0
+A => process_0.IN0
+B => process_0.IN1
+B => process_0.IN1
+Cin => process_0.IN1
+Cin => process_0.IN1
+S <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
