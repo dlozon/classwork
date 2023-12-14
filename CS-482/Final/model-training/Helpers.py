@@ -1,14 +1,42 @@
-import numpy as np
+'''
+This file contains several helper classes and functions used by the model training scripts.
+'''
+
+import os, argparse, numpy as np
+from sklearn.linear_model import Lasso
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import roc_curve, auc, confusion_matrix
+from sklearn.metrics import confusion_matrix
 import matplotlib.pyplot as plt
+
+
+class Parser: 
+    parser = argparse.ArgumentParser()
+    parser.add_argument("datafile", help="The path to the file with your data",
+                        type=str, nargs='?', default="./data.csv")
+    
+    def parseArgs(self):
+        '''
+        Return:
+            A string containing the path to the data file
+        '''
+        args = self.parser.parse_args()
+        file = args.datafile
+
+        if os.path.exists(file):
+            return file
+        else:
+            print(f"Error: {file} does not exist.")
+            exit(1)
+    
+
 
 class Loader:
     # Load data from a csv
-    def loadData(self, fname):   
+    def loadData(self, fname, printDataDetails=False):   
         '''
         Parameters:
             fname: a string containing the path to your data csv file
+            printData: whether or not to print information about the data loaded
         Return:
             An array of headers (feature names)\n
             A 2d array containing your data without headers
@@ -22,17 +50,33 @@ class Loader:
         data = data.astype(int)
         
         # Print information about the data loaded
-        print()
-        print(f"Feature Names: \n{headers}\n")
-        print(f"Data Loaded: \n{data}\n")
-        print(f"Target Data: \n{data[:, -1]}\n")
-        print(f"Correlation Coefficients Table:\n{np.corrcoef(np.transpose(data))}\n")
-        print(f"Target Name: {headers[-1]}")
+        if printDataDetails:
+            print()
+            print(f"Feature Names: \n{headers}\n")
+            print(f"Data Loaded: \n{data}\n")
+            print(f"Target Data: \n{data[:, -1]}\n")
+            print(f"Correlation Coefficients:\n{np.corrcoef(np.transpose(data))[-1]}\n")
+            print(f"Target Name: {headers[-1]}\n")
+        # Always say the shape of the data
+        print("Data Loaded!")
         print(f"Data Shape: {arr.shape}")
-        print("\nData Loaded!")
         print()
         
         return headers, data
+    
+    def saveData(self, fname, headers, data):
+        '''
+        Parameters:
+            fname: a string containing the path to your data csv file
+            data: a 2d array containing your data
+        Function:
+            Save data to a csv file
+        '''
+        data = np.vstack((headers, data))
+
+        print("\nSaving Data..........")
+        np.savetxt(fname, data, delimiter=",", fmt="%s")
+        print("Data Saved!")
     
     # Split data into training and test predictors and outcomes
     def splitData(self, data, test_size=.2):
@@ -67,64 +111,149 @@ class Preprocessor:
         Return:
             the new data with no empty rows
         ''' 
-        print("\nRemoving empty rows of data...")
-
         rows, cols = data.shape
         newData = []
         removedRows = 0
+
+        print("\nRemoving empty rows of data...")
         for row in range(rows):
-            if np.all(data[row, :-1] == 0):
-                removedRows += 1
+            if not np.all(data[row, :-1] == 0):
+                newData.append(data[row]) 
             else:
-                newData.append(data[row])
-
+                removedRows += 1
+                
         print(f"{removedRows} rows of data were dropped.")
+
         return np.array(newData)
-
-
-
-
-class Plotter:
-    # Plot a histogram for one feature
-    def plotFeatureHistogram(self, featureName, feature):
+    
+    def dropEmptyCols(self, data):
         '''
         Parameters:
-            featureName: the name of the feature as a string
-            feature: 1-dimensional array of data
-        Function:
-            Plot a histogram to show the distribution for feature
+            data: the data to have columns removed from
+        Return:
+            the new data with no empty columns
+        ''' 
+        rows, cols = data.shape
+        newData = []
+        removedCols = 0
+
+        print("\nRemoving empty columns of data...")
+        for col in range(cols):
+            if not np.all(data[:, col] == 0):
+                newData.append(data[:, col])
+            else:
+                removedCols += 1
+        print(f"{removedCols} columns of data were dropped.")
+
+        return np.transpose(np.array(newData))
+    
+    def dropLeastCorrelatedCols(self, headers, data, percentile=30):
         '''
-        # Plot the hist
-        ignore, fig = plt.subplots()
-        fig.set_title(f"{featureName} Measurements") 
-        fig.set_xlabel(f'{featureName}')
-        fig.set_ylabel('Frequency')
-        fig.hist(feature, bins = 20,color = "blue",  edgecolor = "black")
-        plt.show()
+        Parameters:
+            headers: the headers of the data
+            data: the data to have columns removed from
+            percentile: what percent of the data should be removed
+        Return:
+            the new data with no correlated columns
+        ''' 
+        # Find the threshold of bottom 30% correlation
+        # Use absolute value so we remove columns with small correlations, instead of negative ones
+        correlations = np.abs(np.corrcoef(np.transpose(data))[-1])
+        threshold = np.percentile(correlations, 30)
+        numRemoved = 0
+        
+        print(f"\nCorrelation threshold for feature removal: {threshold}")
+        print("Removing least correlated features...")
+        print("Removed features: ", end="")
+        for i in range(len(correlations) - 1, -1, -1):
+            if correlations[i] <= threshold:
+                data = np.delete(data, i, axis=1)
+
+                print(f"{headers[i]}, ", end="")
+                headers = np.delete(headers, i)
+                
+                numRemoved += 1
+
+        rows, cols = data.shape
+        print(f"In total, {numRemoved} columns (bottom 30%) were dropped from the array, leaving {cols} columns.")
+
+        return headers, data
+    
+    def dropLowestBetas(self, headers, data, alpha, percentile=30):
+        '''
+        Parameters:
+            headers: the headers of the data
+            data: the data to have columns removed from
+            alpha: the alpha value to use for lasso
+            percentile: what percent of the data should be removed
+        Return:
+            the new data with lowest beta columns removed
+        '''
+        lasso = Lasso(alpha=alpha, random_state=42)
+        lasso.fit(data[:, :-1], data[:, -1])
+        threshold = np.percentile(lasso.coef_, percentile)
+        numRemoved = 0
+
+        print(f"\nBeta threshold for feature removal: {threshold}")
+        print("Removing features with the lowest beta...")
+        print("Removed features: ", end="")
+        for i in range(len(lasso.coef_) - 1, -1, -1):
+            if lasso.coef_[i] <= threshold:
+                data = np.delete(data, i, axis=1)
+
+                print(f"{headers[i]}, ", end="")
+                headers = np.delete(headers, i)
+                
+                numRemoved += 1
+        
+        rows, cols = data.shape
+        print(f"In total, {numRemoved} columns (top 30%) were dropped from the array, leaving {cols} columns.")
+
+        return headers, data
 
 
 
 class Evaluator:
     # Print out the accuracy, recall, precision, specificity, and fstat of a model's
-    def printMetrics(self, true, predicted):
+    def getMetrics(self, true, predicted, printMetrics=True):
         '''
         Parameters:
             true: the real data
             feature: what a model predicted
+        Return:
+            A dictionary containing the metrics
         Function:
             Provide information about a model's performance
         '''
         tn, fp, fn, tp = confusion_matrix(true, predicted).ravel()
 
+        # Calculate the metrics
         accuracy = (tp+tn) / (tp+tn+fp+fn)
         recall = tp / (tp+fn)
         precision = tp / (tp+fp)
         specificity = tn / (tn+fp)
         fstat = 2 * ((precision*recall) / (precision+recall))
 
-        print(f"True Positives: {tp}, False Positives: {fp}, True Negatives: {tn}, False Negatives: {fn}")
-        print(f"Accuracy: {accuracy}")
-        print(f"Recall: {recall}")
-        print(f"Precision: {precision}")
-        print(f"Specificity: {specificity}")
-        print(f"F-Stat: {fstat}")
+        # Print the metrics
+        if printMetrics:
+            print(f"True Positives: {tp}, False Positives: {fp}, True Negatives: {tn}, False Negatives: {fn}")
+            print(f"Accuracy: {accuracy}")
+            print(f"Recall: {recall}")
+            print(f"Precision: {precision}")
+            print(f"Specificity: {specificity}")
+            print(f"F-Stat: {fstat}")
+
+        # Return metrics as a dictionary
+        metrics = {
+            "True Positives": tp,
+            "False Positives": fp,
+            "True Negatives": tn,
+            "False Negatives": fn,
+            "Accuracy": accuracy,
+            "Recall": recall,
+            "Precision": precision,
+            "Specificity": specificity,
+            "FStat": fstat
+        }
+
+        return metrics

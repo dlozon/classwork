@@ -338,9 +338,9 @@ def hazard_already_played(hazard, player_moves):
 # returns the outcome/winner of the battle
 def get_outcome(line, p1a, p2a):
     if p1a in line:   
-        return '0'  # player1 won
+        return '1'  # player1 won
     elif p2a in line: 
-        return '1'  # player2 won
+        return '0'  # player1 lost
     return None
 
 # sets the output to be printed to the output file
