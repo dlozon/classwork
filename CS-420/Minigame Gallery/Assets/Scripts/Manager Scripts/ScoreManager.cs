@@ -9,10 +9,9 @@ public class ScoreManager
 {
     // This is a container that stores persistent score data
     public class PersistentScores {
-        public string SG_playerName;
         public int SG_highScore;
         public float SG_highScoreAccuracy;
-        public int SG_totalHits;
+        public int SG_totalHitsEver;
     }
     private readonly PersistentScores scoreData;
     private readonly string FilePath;
@@ -23,7 +22,6 @@ public class ScoreManager
     private int SG_currentMisses = 0;
     private int SG_currentScore = 0; 
     
-    // Construct a score manager
     public ScoreManager(string FileDir, string FileName) {
         FilePath = FileDir + FileName;
         Debug.Log("ScoreManager created with scorefile: " + FilePath);
@@ -35,10 +33,9 @@ public class ScoreManager
     PersistentScores CreateShootingGalleryScoreFile(string filePath) {
         PersistentScores newScoreData = new()
         {
-            SG_playerName = "No Score Yet!",
             SG_highScore = 0,
             SG_highScoreAccuracy = 0,
-            SG_totalHits = 0
+            SG_totalHitsEver = 0
         };
 
         string json = JsonUtility.ToJson(newScoreData);
@@ -48,7 +45,6 @@ public class ScoreManager
         return newScoreData;
     }
 
-    // Load score data from a file
     PersistentScores LoadScoreData(string filePath) {
         // If the score file does not exist, make a new one
         if (!File.Exists(filePath))
@@ -62,7 +58,14 @@ public class ScoreManager
         return loadedData;
     }
 
-    // Save score data to a file
+    public int GetShootingGalleryHighScore() { return scoreData.SG_highScore; }
+    public int GetShootingGalleryCurrentScore() { return SG_currentScore; }
+    public float GetShootingGalleryBestAccuracy() { return scoreData.SG_highScoreAccuracy; }
+    public float GetShootingGalleryCurrentAccuracy() { 
+        if (SG_currentHits == 0 && SG_currentMisses == 0) return 0;
+        return (float) SG_currentHits / (SG_currentHits + SG_currentMisses); 
+    }
+
     void SaveShootingGalleryScoreData(string filePath) {
         // If the score file does not exist, make a new one
         if (!File.Exists(filePath))
@@ -72,10 +75,9 @@ public class ScoreManager
         PersistentScores existingScoreData = LoadScoreData(filePath);
 
         // Update the shooting gallery score data
-        existingScoreData.SG_playerName = scoreData.SG_playerName;
         existingScoreData.SG_highScore = scoreData.SG_highScore;
         existingScoreData.SG_highScoreAccuracy = scoreData.SG_highScoreAccuracy;
-        existingScoreData.SG_totalHits = scoreData.SG_totalHits;
+        existingScoreData.SG_totalHitsEver = scoreData.SG_totalHitsEver;
 
         // Serialize and save the updated data
         string updatedJson = JsonUtility.ToJson(existingScoreData);
@@ -83,7 +85,6 @@ public class ScoreManager
         Debug.Log("Shooting gallery scores saved successfully.");
     }
     
-    // Start a shooting gallery minigame and reset the current score
     public void ShootingGalleryStart() {
         SG_currentHits = 0;
         SG_currentMisses = 0; 
@@ -91,7 +92,7 @@ public class ScoreManager
     }
     
     public void TargetHit() {
-        scoreData.SG_totalHits++;
+        scoreData.SG_totalHitsEver++;
         SG_currentHits++; 
         SG_currentScore += TargetValue;
         Debug.Log("A target was hit");
@@ -102,9 +103,7 @@ public class ScoreManager
         Debug.Log("A target was missed");
     }
 
-    // End a shooting gallery minigame save new score data
     public void ShootingGalleryEnd() {
-        // Update the high score if the current score is higher
         if (SG_currentScore > scoreData.SG_highScore){
             scoreData.SG_highScore = SG_currentScore;   
             scoreData.SG_highScoreAccuracy = (float)SG_currentHits / (SG_currentHits + SG_currentMisses);

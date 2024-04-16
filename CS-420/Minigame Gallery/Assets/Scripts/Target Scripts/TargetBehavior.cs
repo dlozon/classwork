@@ -10,29 +10,38 @@ public class TargetBehavior : MonoBehaviour
     public Material hitMaterial;
     [Tooltip("The target will be destroyed when they fall below this height.")]
     public float destroyHeight = -1;
+    [Tooltip("The target will be destroyed after this many seconds. 0 to disable.")]
+    public float destroyTime = 15f;
 
     private Renderer targetRenderer;
-    private GameObject gameManager;
+    private GameManager gameManager;
     private bool hit = false;
 
     // Start is called before the first frame update
-    void Start() {
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
-        targetRenderer = GetComponent<Renderer>();
+    void Start()
+    {
+        Destroy(gameObject, destroyTime);
 
-        if (!targetRenderer)
+        if (!GameObject.FindGameObjectWithTag("GameManager").TryGetComponent<GameManager>(out gameManager))
+            Debug.LogError("No game manager found.");
+        if (!TryGetComponent<Renderer>(out targetRenderer))
             Debug.LogError("Target has no renderer.");
+
         if (targetRenderer.materials.Length <= 0)
             Debug.LogError("Target has no materials.");
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         if (transform.position.y < destroyHeight)
             DestroySelf();
 
+        // Add keyboard controls for testing
+        #if UNITY_EDITOR
         if (Keyboard.current.downArrowKey.wasPressedThisFrame)
             Hit();
+        #endif
     }
 
     // Defines program behavior when this target is shot
@@ -42,7 +51,7 @@ public class TargetBehavior : MonoBehaviour
             return;
         hit = true;
         
-        gameManager.SendMessage("TargetHit");
+        gameManager.TargetHit();
         
         // Only change materials if one was provided
         if (hitMaterial != null)
@@ -62,7 +71,7 @@ public class TargetBehavior : MonoBehaviour
     // Destroys this object
     private void DestroySelf() {
         if (!hit)
-            gameManager.SendMessage("TargetMiss");
+            gameManager.TargetMiss();
 
         Destroy(gameObject);
     }

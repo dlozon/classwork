@@ -1,0 +1,5 @@
+C:/Users/Beast/Desktop/classwork/CS-420/VR Test/.utmp/Debug/3595h4w5/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/Beast/Desktop/classwork/CS-420/VR Test/.utmp/Debug/3595h4w5/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/Beast/Desktop/classwork/CS-420/VR Test/.utmp/Debug/3595h4w5/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Users/Beast/Desktop/classwork/CS-420/VR Test/.utmp/Debug/3595h4w5/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Users/Beast/Desktop/classwork/CS-420/VR Test/.utmp/Debug/3595h4w5/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

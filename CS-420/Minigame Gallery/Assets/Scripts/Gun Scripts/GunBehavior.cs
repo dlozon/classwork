@@ -5,13 +5,32 @@ using UnityEngine.InputSystem;
 
 public class GunBehavior : MonoBehaviour
 {
+    [Tooltip("If true, the gun will fire a bullet. Otherwise, it will perform a raycast")]
+    public bool useBullet = true;
+
     [Tooltip("Copies of this object will be created and launched.")]
     public GameObject bulletObject;
-    // The force applied to a bullet when the gun is fired
+    [Tooltip("The force applied to a bullet when the gun is fired")]
     public float launchForce = 10f;
+    [Tooltip("The bullet will spawn at this point relative to the position of the gun.")]
+    public Transform bulletSpawnPoint;
 
-    // The bullet will spawn at this point relative to the position of the gun
-    readonly private Vector3 bulletSpawnOffset = new(0.25f, 0.015f, .0f);
+    [Tooltip("The sound that plays when the gun is fired.")]
+    public AudioClip shootSound;
+    [Range(0f, 1f)]
+    public float shootVolume = 1f;
+
+    private AudioSource audioSource;
+
+    private void Start() {
+        // Add an AudioSource component to the GameObject
+        audioSource = gameObject.AddComponent<AudioSource>();
+        // Assign the shoot sound to the AudioSource
+        audioSource.clip = shootSound;
+
+        if (shootSound == null)
+            Debug.LogWarning("No shoot sound assigned to the gun.");
+    }
 
     private void Update() {
         // Controls intended for testing use
@@ -19,15 +38,39 @@ public class GunBehavior : MonoBehaviour
             Shoot();
     }
 
-    void Shoot() {
-        // Spawn a bullet at an offset relative to the gun
-        Vector3 spawnPosition = transform.position + transform.TransformDirection(bulletSpawnOffset);
-        GameObject bullet = Instantiate(bulletObject, spawnPosition, transform.rotation);
+    public void Shoot() {
+        // Play the shoot sound
+        if (shootSound != null)
+            audioSource.PlayOneShot(shootSound, shootVolume);
+
+        if (useBullet)
+            ShootBullet();
+        else
+            ShootRaycast();
+    }
+
+    private void ShootBullet() {
+        // Spawn a bullet at the given position
+        GameObject bullet = Instantiate(bulletObject, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        bullet.transform.parent = null; // Disown the bullet
 
         // Apply a force to the bullet
         if (bullet.TryGetComponent<Rigidbody>(out var rb))
-            rb.AddForce(transform.right * launchForce, ForceMode.Impulse);
+            rb.AddForce(bulletSpawnPoint.forward * launchForce, ForceMode.Impulse);
         else
-            Debug.LogWarning("The spawned object doesn't have a Rigidbody component.");
+            Debug.LogError("The bullet doesn't have a Rigidbody component.");
+    }
+
+    private void ShootRaycast() {
+        // Simulate a shot being fired by raycasting
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit)) {
+            // Get the GameObject that was hit
+            GameObject hitObject = hit.collider.gameObject;
+
+            // Tell the object it was hit
+            hitObject.SendMessage("Hit", SendMessageOptions.DontRequireReceiver);
+            // Log the hit
+            Debug.Log(hitObject.name + " was shot.");
+        }
     }
 }

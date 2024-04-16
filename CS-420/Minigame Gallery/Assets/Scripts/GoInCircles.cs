@@ -1,5 +1,4 @@
 using System.Collections;
-using UnityEditor.EditorTools;
 using UnityEngine;
 
 public class GoInCircles : MonoBehaviour
@@ -12,11 +11,13 @@ public class GoInCircles : MonoBehaviour
     private Vector3 initialPosition;
     private float angle = 0.0f;
 
-    private void Start() {
+    private void Start()
+    {
         initialPosition = transform.position;
     }
 
-    private void Update() {
+    private void Update()
+    {
         // Calculate the new position in the circular path
         float x = initialPosition.x + radius * Mathf.Cos(Mathf.Deg2Rad * angle);
         float z = initialPosition.z + radius * Mathf.Sin(Mathf.Deg2Rad * angle);

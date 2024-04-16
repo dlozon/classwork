@@ -1,5 +1,4 @@
 using System.Collections;
-using UnityEditor.EditorTools;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,13 +14,17 @@ public class TargetSpawner : MonoBehaviour
 
     public float launchForce = 10f;
 
-    private void Update() {
-        // Controls intended for testing use
+    void Update()
+    {
+        // Add keyboard controls for testing
+        #if UNITY_EDITOR
         if (Keyboard.current.upArrowKey.wasPressedThisFrame)
             Activate();
+        #endif
     }
 
-    private void Activate() {
+    public void Activate()
+    {
         // Create a copy of the target using the given transform
         GameObject newObject = Instantiate(targetObject, shootFrom.position, shootFrom.rotation);
 

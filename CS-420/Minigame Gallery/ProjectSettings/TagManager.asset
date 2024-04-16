@@ -6,12 +6,11 @@ TagManager:
   tags:
   - Target
   - GameManager
-  - NPC
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Terrain
   - Water
   - UI
   - 

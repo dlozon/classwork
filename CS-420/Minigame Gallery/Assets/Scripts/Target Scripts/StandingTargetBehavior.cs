@@ -15,7 +15,7 @@ public class StandingTargetBehavior : MonoBehaviour
     [Tooltip("The target can stand for this long before deactivating.")]
     public float maxStandTime = 5;
 
-    private GameObject gameManager;
+    private GameManager gameManager;
     private Animator targetAnimator;
     private Renderer targetRenderer;
     private Material[] originalMaterials;
@@ -23,16 +23,15 @@ public class StandingTargetBehavior : MonoBehaviour
     private float startedStanding;
 
     // Start is called before the first frame update
-    void Start() {
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
-        targetAnimator = GetComponent<Animator>();
-        targetRenderer = GetComponent<Renderer>();
-
-        // Check for missing components
-        if (!targetRenderer)
-            Debug.LogError("Standing target has no renderer component.");
-        if (!targetAnimator)
+    void Start()
+    {
+        // Try to get the components needed for this script
+        if (!GameObject.FindGameObjectWithTag("GameManager").TryGetComponent<GameManager>(out gameManager))
+            Debug.LogError("No game manager found.");
+        if (!TryGetComponent<Animator>(out targetAnimator))
             Debug.LogError("Standing target has no animator component.");
+        if (!TryGetComponent<Renderer>(out targetRenderer))
+            Debug.LogError("Standing target has no renderer component.");
         if (targetRenderer.materials.Length <= 0)
             Debug.LogError("Standing target has no materials.");
 
@@ -40,12 +39,15 @@ public class StandingTargetBehavior : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() {
-        // Controls intended for testing use
+    void Update()
+    {
+        // Add keyboard controls for testing
+        #if UNITY_EDITOR
         if (Keyboard.current.upArrowKey.wasPressedThisFrame)
             Activate();
         if (Keyboard.current.downArrowKey.wasPressedThisFrame)
             Hit();
+        #endif
 
         // If the target has been standing too long, deactivate it
         if (standing && Time.time - startedStanding > maxStandTime) {
@@ -54,7 +56,7 @@ public class StandingTargetBehavior : MonoBehaviour
     }
 
     // Defines program behavior when this target should stand
-    void Activate() {
+    public void Activate() {
         // Do nothing if target was already activated
         if (standing)
             return;
@@ -68,12 +70,13 @@ public class StandingTargetBehavior : MonoBehaviour
     }
 
     // Defines program behavior when this target is shot
-    void Hit() {
+    public void Hit() {
         // Break out of the function early if target was already hit before
         if (!standing)
             return;
         
-        gameManager.SendMessage("TargetHit");
+        if(gameManager != null)
+            gameManager.TargetHit();
         
         // Only change materials if one was provided
         if (hitMaterial != null) {
@@ -86,12 +89,13 @@ public class StandingTargetBehavior : MonoBehaviour
     }
 
     // Defines program behavior when this target is shot
-    private void Deactivate() {
+    public void Deactivate() {
         if (missMaterial != null) {
             ChangeRingsMaterial(missMaterial);
         }
 
-        gameManager.SendMessage("TargetMiss");
+        if(gameManager != null)
+            gameManager.TargetMiss();
 
         standing = false;
         targetAnimator.ResetTrigger("StandTrigger");

@@ -6,13 +6,15 @@ public class TargetMinigameManager : MonoBehaviour
 {
     public float MinTime {get; set;}
     public float MaxTime {get; set;}
+    public int maxMultiTarget = 2;
 
     private GameObject[] targets;
 
     // Constructor
     public TargetMinigameManager() {}
 
-    public void StartMinigame() {
+    public void StartMinigame()
+    {
         Debug.Log("Shooting Gallery minigame is starting...");
         targets = GameObject.FindGameObjectsWithTag("Target");
 
@@ -28,22 +30,30 @@ public class TargetMinigameManager : MonoBehaviour
 
     public void EndMinigame() {
         Debug.Log("Shooting Gallery minigame has ended.");
+
+        foreach (GameObject target in targets)
+            target.SendMessage("Deactivate", SendMessageOptions.DontRequireReceiver);
+
         StopCoroutine(ActivateTargetsWithRandomInterval());
     }
 
     // Coroutine to activate targets at random intervals
     private IEnumerator ActivateTargetsWithRandomInterval() {
         while (true) {
+            int targets = Random.Range(1, maxMultiTarget + 1);
+
             // Wait for a random time between minTime and maxTime
             float timeInterval = Random.Range(MinTime, MaxTime);
             yield return new WaitForSeconds(timeInterval);
 
-            // Pick a random target to activate
-            int randomIndex = Random.Range(0, targets.Length);
-            GameObject randomTarget = targets[randomIndex];
-            
-            // Activate the target
-            randomTarget.SendMessage("Activate");
+            // Activate random targets
+            for (int i = 0; i < targets; i++) {
+                int randomIndex = Random.Range(0, this.targets.Length);
+                GameObject randomTarget = this.targets[randomIndex];
+                
+                randomTarget.SendMessage("Activate");
+            }
         }
     }
+    
 }
