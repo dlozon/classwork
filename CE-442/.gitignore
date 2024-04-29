@@ -1,9 +1,9 @@
 # ignore assignment instructions and submissions
 *.pdf
-*.zip
 
 # save docx reports
 !.docx
 
 # ignore simulink project files
 **/slprj/*
+*.slxc

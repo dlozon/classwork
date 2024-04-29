@@ -431,7 +431,7 @@
             <File>
               <FileName>lab1.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\..\Downloads\lab1.s</FilePath>
+              <FilePath>.\lab1.s</FilePath>
             </File>
           </Files>
         </Group>
