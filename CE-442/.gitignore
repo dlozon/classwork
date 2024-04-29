@@ -5,5 +5,8 @@
 !.docx
 
 # ignore simulink project files
-**/slprj/*
+**/slprj/
 *.slxc
+
+# ignore code builds
+*/build/

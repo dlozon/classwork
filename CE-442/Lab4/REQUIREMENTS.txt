@@ -1,0 +1,8 @@
+The following libraries are required to run this code:
+
+
+NewPing - by Tim Eckel - Tested with version 1.9.7
+Motor* - by Li Dang, Girma Tewolde, Dylan Lozon 
+
+
+*Provided in the CustomLibraries directory
