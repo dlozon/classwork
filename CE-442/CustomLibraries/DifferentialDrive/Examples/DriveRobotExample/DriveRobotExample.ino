@@ -2,13 +2,13 @@
 #include <Motor.h>
 
 /* Initialize the left-side motor
- * Pin 8 is a digital pin used to control the direction of the motor
- * Pin 5 is an analog pin used to control the speed of the motor */
-Motor motorLeft(8, 5);
+ * Pin 5 is an analog pin used to control the speed of the motor
+ * Pin 8 is a digital pin used to control the direction of the motor */
+Motor motorLeft(5, 8);
 /* Initialize the right-side motor
- * Pin 12 is a digital pin used to control the direction of the motor
- * Pin 6 is an analog pin used to control the speed of the motor */
-Motor motorRight(12, 6);
+ * Pin 6 is an analog pin used to control the speed of the motor
+ * Pin 12 is a digital pin used to control the direction of the motor */
+Motor motorRight(6, 12);
 
 void setup() {
   /* Invert the direction of the left motor 

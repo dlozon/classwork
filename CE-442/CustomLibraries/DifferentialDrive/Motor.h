@@ -15,9 +15,10 @@
 class Motor {
 public:
     /** @brief Constructor for the Motor class.
-     *  @param d_pin The digital pin connected to the direction pin of the motor.
-     *  @param s_pin The analog pin connected to the speed pin of the motor. */
-    Motor(int d_pin, int s_pin);
+     *  @param speedPin The analog pin that controls the speed of the motor.
+     *  @param directionPin The digital pin that controls the direction of the motor.
+     *  @param inverted Whether the motor direction should be inverted. */
+    Motor(int speedPin, int directionPin, bool inverted = false);
 
 
     /** @brief Get the inversion state of the motor.
@@ -42,11 +43,12 @@ public:
     /** @brief Provides a very small amount of power to the motor to stop it from turning. */
     void activeStop();
   
+  
 private:
     // The digital pin connected to the direction pin of the motor.
-    int dir_pin;
+    int dirPin;
     // The analog pin connected to the speed pin of the motor.
-    int speed_pin;
+    int spdPin;
     // Whether the motor direction is inverted.
     bool inverted;
 };

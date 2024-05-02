@@ -1,42 +1,36 @@
 #include "Arduino.h"
-#include <Motor.h>
+#include <DifferentialDrive.h>
 
-Motor motorLeft(8, 5);
-Motor motorRight(12, 6);
+DifferentialDrive drivetrain(5, 8, 6, 12);
 
 // Drive in a right-side circle with a 4ft diameter
 void clockwiseCircle4ftDiameter() {
     // Drive in a circle
-    motorLeft.forward(70);
-    motorRight.forward(54);
+    drivetrain.tankDrive(70, 54);
     delay(8015);
     // Brake
-    motorLeft.activeStop();
-    motorRight.activeStop();
+    drivetrain.activeStop();
 }
 
 // Drive in a left-side circle with a 4ft diameter
 void counterClockwiseCircle4ftDiameter() {
     // Drive in a circle
-    motorLeft.forward(50);
-    motorRight.forward(70);
+    drivetrain.tankDrive(50, 70);
     delay(7915);
     // Brake
-    motorLeft.activeStop();
-    motorRight.activeStop();
+    drivetrain.activeStop();
 }
 
-// Configure motors and wait a second before starting the program
+// Wait a second before starting the program
 void setup() {
-    motorLeft.setInverted(true);
     delay(1000);
 }
 
 // Drive in a figure-eight pattern with 4ft diameter circles
 void loop() {
     clockwiseCircle4ftDiameter();
-    delay(1000);
+    delay(500);
     
     counterClockwiseCircle4ftDiameter();
-    delay(1000);
+    delay(500);
 }

@@ -1,41 +1,42 @@
 #include "Arduino.h"
-#include <Motor.h>
+#include <DifferentialDrive.h>
 #include <NewPing.h>
 
-Motor motorLeft(8, 5);
-Motor motorRight(12, 6);
+DifferentialDrive drivetrain(5, 8, 6, 12);
 NewPing sonar(A2, A3, 50);
+
+
+// Turn the robot 90 degrees to its right
+void turnClockwise90() {
+    drivetrain.turnRight(50);
+    delay(430);
+
+    drivetrain.activeStop();
+}
+// Turn the robot 90 degrees to its left
+void turnCounterClockwise90() {
+    drivetrain.turnLeft(50);
+    delay(430);
+
+    drivetrain.activeStop();
+}
+
+
 void setup() {
-    motorLeft.setInverted(true);
     delay(1000);
 }
 
 void loop() {
     int obstacleDistance = sonar.convert_cm(sonar.ping_median());
 
-    // If there is no obstacle within 30cm, drive forward
-    if (!obstacleDistance || obstacleDistance > 30) {
-        motorLeft.forward(49);
-        motorRight.forward(50);
+    // If there is an obstacle within 30cm, turn to avoid it
+    if (obstacleDistance && obstacleDistance < 30) {
+        if(random(0,2) == 0)
+            turnClockwise90();
+        else
+            turnCounterClockwise90();
     }
-    else { // Turn clockwise to avoid obstacles
-        if (random(0,1) == 1) {
-            motorLeft.backward(50);
-            motorRight.forward(50);
-            while(obstacleDistance || obstacleDistance > 30){
-            obstacleDistance = sonar.convert_cm(sonar.ping_median());  
-            delay(50);
-            }
-        }
-        else {
-            motorLeft.forward(50);
-            motorRight.backward(50);
-            while(obstacleDistance || obstacleDistance > 30){
-                obstacleDistance = sonar.convert_cm(sonar.ping_median());  
-                delay(50);
-            }
-        }
-    } 
 
+    drivetrain.tankDrive(49, 50);
     delay(50);
 }

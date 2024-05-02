@@ -1,43 +1,35 @@
 #include "Arduino.h"
-#include <Motor.h>
+#include <DifferentialDrive.h>
 
-Motor motorLeft(8, 5);
-Motor motorRight(12, 6);
+DifferentialDrive drivetrain(5, 8, 6, 12);
 
 // Turn the robot 90 degrees to its right
 void turnClockwise90() {
-    motorLeft.setSpeed(50);
-    motorRight.setSpeed(-50);
+    drivetrain.turnRight(50);
     delay(430);
 
-    motorLeft.activeStop();
-    motorRight.activeStop();
+    drivetrain.activeStop();
 }
 
 // Drive the robot forward 4ft
 void driveForward4ft50Percent() {
-    motorLeft.forward(48);
-    motorRight.forward(50);
+    drivetrain.tankDrive(49, 50);
     delay(3100);
 
-    motorLeft.activeStop();
-    motorRight.activeStop();
+    drivetrain.activeStop();
 }
 
 // Drive the robot forward 4ft
 void driveForward4ft80Percent() {
-    motorLeft.forward(76);
-    motorRight.forward(80);
+    drivetrain.tankDrive(77, 80);
     delay(1969);
 
-    motorLeft.activeStop();
-    motorRight.activeStop();
+    drivetrain.activeStop();
 }
 
 
 // Configure motors and wait a second before starting the program
 void setup() {
-    motorLeft.setInverted(true);
     delay(1000);
 }
 
