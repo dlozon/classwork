@@ -2,7 +2,7 @@
 #include "Motor.h"
 
 
-Motor::Motor(int dirPin, int spdPin, bool inverted) {
+Motor::Motor(int spdPin, int dirPin, bool inverted) {
 	pinMode(dirPin, OUTPUT);
 	pinMode(spdPin, OUTPUT);
 	this->dirPin = dirPin;
@@ -22,7 +22,7 @@ void Motor::setSpeed(int speed) {
 
 	// Drive the motor
 	digitalWrite(dirPin, dir);
-	analogWrite(spdPin, map(speed, 0, 100, 0, 255));
+	analogWrite(spdPin, map(abs(speed), 0, 100, 0, 255));
 }
 
 void Motor::forward(int speed) {

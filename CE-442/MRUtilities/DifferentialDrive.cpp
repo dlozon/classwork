@@ -13,23 +13,23 @@ DifferentialDrive::DifferentialDrive(int lmSpdPin, int lmDirPin, int rmSpdPin, i
     leftMotor = new Motor(lmSpdPin, lmDirPin);
     leftMotor->setInverted(true);
 
-    rightMotor = new Motor(lmSpdPin, rmDirPin);
+    rightMotor = new Motor(rmSpdPin, rmDirPin);
 }
 
 
 void DifferentialDrive::arcadeDrive(int drive, int turn) {
     // Limit inputs to [-100, 100]
-    int leftSpeed =  leftSpeed < -100 ? -100 : 
-                    (leftSpeed > 100 ? 100 : leftSpeed);
-    int rightSpeed = rightSpeed < -100 ? -100 : 
-                    (rightSpeed > 100 ? 100 : rightSpeed);
+    drive = drive < -100 ? -100 : 
+           (drive > 100 ? 100 : drive);
+    turn =  turn < -100 ? -100 : 
+            (turn > 100 ? 100 : turn);
 
     // Calculate the instructions for each motor
     int leftSpeed = drive + turn;
     int rightSpeed = drive - turn;
 
     // Only attempt to scale if at least one input is non-zero
-    if (leftSpeed || rightSpeed) {
+    if (drive || turn) {
         // Find the factor required to scale the largest input down to 100
         int greaterInput = max(abs(drive), abs(turn));
         int lesserInput = min(abs(drive), abs(turn));
