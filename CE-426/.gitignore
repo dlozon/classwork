@@ -1,3 +1,6 @@
 # ignore settings
 *.uvopt
 *.uvgui.*
+*.o
+*.d
+*.bak
